@@ -1,0 +1,254 @@
+<html lang="en">
+
+<head>
+	<title>Student Registration Form</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+		}
+
+		h1 {
+			text-align: center;
+		}
+
+		form {
+			width: 850px;
+			margin: 0 auto;
+			background-color: #D8B7DD;
+			padding: 20px;
+			border-radius: 8px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		}
+
+		.container {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: 15px;
+		}
+
+		.container label {
+			width: 150px;
+		}
+
+		.container input,
+		.container select,
+		.container textarea {
+			flex: 1;
+			padding: 5px;
+			font-size: 14px;
+		}
+
+		textarea {
+			resize: vertical;
+		}
+
+		.button-container {
+			display: flex;
+			gap: 10px;
+			margin-top: 20px;
+		}
+
+		.other-hobby {
+			display: flex;
+			align-items: center;
+			gap: 5px;
+			margin-top: 10px;
+			margin-left: 150px;
+			margin-bottom: 15px;
+		}
+
+		.other-hobby ipnut[type="text"] {
+			width: 150px;
+			padding: 5px;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+		}
+
+		table {
+			width: 50px;
+			border-collapse: collapse;
+			font-size: 14px;
+			text-align: left;
+		}
+
+		th,
+		td {
+			border: 1px solid #ddd;
+			padding: 8px;
+		}
+
+		th {
+			background-color: #6c3483;
+		}
+
+		input[type="submit"],
+		input[type="reset"] {
+			flex: 1;
+			display: block;
+			text-align: center;
+			padding: 10px;
+			background-color: #6C3483;
+			color: white;
+			font-size: 16px;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+		}
+
+		input[type="submit"]:hover {
+			background-color: #512E5F;
+		}
+
+		input[type="reset"]:hover {
+			background-color: #512E5F;
+		}
+	</style>
+</head>
+
+<body>
+	<h1><u>STUDENT REGISTRATION FORM</u></h1>
+	<form name="reg">
+		<div class="container">
+			<label for="fname">First Name:</label>
+			<input type="text" id="fname" name="fname" required>
+		</div>
+
+		<div class="container">
+			<label for="lname">Last Name:</label>
+			<input type="text" id="lname" name="lname" required>
+		</div>
+
+		<div class="container">
+			<label for="dob">Date of Birth:</label>
+			<input type="date" id="dob" name="dob" required>
+		</div>
+
+		<div class="container">
+			<label for="email">Email ID:</label>
+			<input type="email" id="email" name="email" required>
+		</div>
+
+		<div class="container">
+			<label for="mobile">Mobile Number:</label>
+			<input type="tel" id="mobile" name="mobile" required>
+		</div>
+
+		<div class="container">
+			<label for="gender">Gender:</label>
+			<input type="radio" id="male" name="gender" value="male" required>
+			<label for="male">Male</label>
+
+			<input type="radio" id="female" name="gender" value="female">
+			<label for="female">Female</label>
+		</div>
+
+		<div class="container">
+			<label for="address">Address:</label>
+			<textarea id="address" name="address" required></textarea>
+		</div>
+
+		<div class="container">
+			<label for="city">City:</label>
+			<input type="text" id="city" name="city" required>
+		</div>
+
+		<div class="container">
+			<label for="pincode">Pin Code:</label>
+			<input type="number" id="pincode" name="pincode" required>
+		</div>
+
+		<div class="container">
+			<label for="state">State:</label>
+			<input type="text" id="state" name="state" required>
+		</div>
+
+		<div class="container">
+			<label for="country">Country:</label>
+			<input type="text" id="country" name="country" required>
+		</div>
+
+		<div class="container">
+			<label for="hobbies">Hobbies:</label>
+			<input type="checkbox" id="drawing" name="hobbies" required>
+			<label for="drawing">Drawing</label>
+
+			<input type="checkbox" id="singing" name="hobbies">
+			<label for="singing">Singing</label>
+
+			<input type="checkbox" id="dancing" name="hobbies">
+			<label for="dancing">Dancing</label>
+
+			<input type="checkbox" id="sketching" name="hobbies">
+			<label for="sketching">Sketching</label>
+
+		</div>
+		<div class="other-hobby">
+			<input type="checkbox" id="others" name="hobbies">
+			<label for="others">Others</label>
+			<input type="text" id="others" name="others">
+		</div>
+
+		<div class="container">
+			<label for="qualification">Qualification:</label>
+			<table>
+				<thead>
+					<tr>
+						<th>Sl.No. Examination</th>
+						<th>Board</th>
+						<th>Percentage</th>
+						<th>Year of Passing</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Class X</td>
+						<td><input type="text" id="board-classx" name="boardClassx" required></td>
+						<td><input type="text" id="percentage-classx" name="percentageClassx" required></td>
+						<td><input type="text" id="yop-classx" name="yopClassx" required></td>
+					</tr>
+					<tr>
+						<td>Class XII</td>
+						<td><input type="text" id="board-classxii" name="boardClassxii" required></td>
+						<td><input type="text" id="percentage-classxii" name="percentageClassxii" required></td>
+						<td><input type="text" id="yop-classxii" name="yopClassxii" required></td>
+					</tr>
+					<tr>
+						<td>Graduation</td>
+						<td><input type="text" id="board-grad" name="boardGrad" required></td>
+						<td><input type="text" id="percentage-grad" name="percentageGrad" required></td>
+						<td><input type="text" id="yop-grad" name="yopGrad" required></td>
+					</tr>
+					<tr>
+						<td>Masters</td>
+						<td><input type="text" id="board-masters" name="boardMasters" required></td>
+						<td><input type="text" id="percentage-masters" name="percentageMasters" required></td>
+						<td><input type="text" id="yop-masters" name="yopMasters" required></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<div class="container">
+			<label for="course">Course Applied For:</label>
+			<input type="radio" id="bca" name="course" value="bca" required>
+			<label for="bca">BCA</label>
+
+			<input type="radio" id="bcom" name="course" value="bcom">
+			<label for="bcom">B.Com</label>
+
+			<input type="radio" id="bsc" name="course" value="bsc">
+			<label for="bsc">B. Sc</label>
+
+			<input type="radio" id="ba" value="ba">
+			<label for="ba">B.A.</label>
+		</div>
+
+		<div class="button-container">
+			<input type="submit" value="Submit">
+			<input type="reset" value="Reset">
+		</div>
+	</form>
+</body>
+
+</html>

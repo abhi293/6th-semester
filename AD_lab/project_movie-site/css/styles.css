@@ -1,0 +1,317 @@
+.orbitron-heading {
+    font-family: "Orbitron", Arial, sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700; /* Replace with desired weight: 400, 500, etc. */
+    font-style: normal;
+  }
+
+  .orbitron-subheading {
+    font-family: "Orbitron", Arial, sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  .im-fell-english-regular {
+    font-family: "IM Fell English", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .im-fell-english-regular-italic {
+    font-family: "IM Fell English", serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+html{
+    width: 100%;
+    font-family: "Orbitron", Arial, sans-serif;
+    font-style:normal;
+    font-weight: 700;
+    font-size: 10px;
+    scroll-behavior:smooth;
+}
+
+header{
+    width:100%;
+    position: sticky;
+    top: 30px;
+    height: 0;
+    background-color: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+header img{
+    border-radius: 50%;
+    object-fit: fill;
+    height: 40px;
+    margin-left: 10px;
+    backdrop-filter: blur(5px);
+    box-shadow:0 0 10px 5px rgba(52, 41, 77, 0.8); /* box-shadow: offset-x offset-y blur-radius spread-radius color; */
+    transition: transform 0.3s ease;
+}
+
+header h1{
+    font-family: "Orbitron", Arial, sans-serif;
+    border: 1px;
+    text-shadow: 2px 2px rgba(7, 7, 21, 0.8);
+    color:white;
+    font-weight: 400;
+    font-style:normal;
+    font-size: 25px;
+}
+
+header text{
+    mix-blend-mode: color-burn;
+}
+
+header a {
+    text-shadow: 2px 2px rgba(7, 7, 21, 0.8);
+    font-size: 20px;
+    text-decoration: none; /* Removes underline */
+    color: inherit; /* Ensures the link text matches the surrounding text color */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.menu_tab{
+    text-align: center;
+    color:white;
+    padding-left: 80px;
+    padding-right: 40px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap:25px;
+}
+
+header a:hover {
+    transform: scale(1.1);
+    color: rgba(218, 192, 140, 0.8);
+    text-decoration: none;
+}
+
+.menu_tab li {
+    opacity: 0.9;
+    transition: transform 0.3s ease;
+}
+
+.menu_tab li:hover{
+    transform: scale(1.2);
+}
+
+.menu_tab li a:hover{
+    text-decoration: underline;
+    color:aqua;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.search1 {
+    position: relative;
+    border: none; /* Added border color */
+    border-radius: 5px;
+    backdrop-filter: blur(5px);
+    box-shadow:0 0 17px 5px rgba(52, 41, 77, 0.8);
+    width: 200px; /* Adjust horizontal size */
+    height: 36px; /* Adjust vertical size */
+}
+
+
+.search1 input {
+    border: none;
+    padding-left: 4px;
+    width: 100%; /* Make the input fill the width of the container */
+    height: 36px; /* Adjust the vertical size of the input */
+    outline: none; /* Optional: Remove the outline when the input is focused */
+    font-size: 16px; /* Optional: Increase font size for better readability */
+    border-radius: 3px; /* Optional: Match the rounded corners of the outer container */
+}
+
+.search1 img{
+    position:absolute;
+    border-radius:50% ;
+    margin: auto;
+    right:0px;
+    height:36px;
+    box-shadow: none;
+    border-radius: 0%;
+}
+
+
+/* Styling for the user1 logo */
+.user1 {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.user1:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Container for the dropdown menu */
+.user-menu {
+    position: relative;
+    display: flex;
+    margin-right: 20px;
+    height: 15px;
+    align-items: center;
+}
+
+/* Dropdown menu styling */
+.dropdown-menu {
+    position: absolute;
+    top: 100%; /* Align directly below the user image */
+    right: 0; /* Align to the right edge */
+    background-color: rgba(52, 41, 77, 0.95);
+    color: white;
+    list-style:none;
+    padding: 0;
+    margin: 5px 0 0; /* Small gap below the image */
+    width: 200px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    visibility: hidden;
+    opacity:1;
+    transition: all 0.3s ease; /* Smooth dropdown */
+    z-index:999;
+    overflow: hidden;
+}
+
+/* Menu items */
+.dropdown-menu li {
+    font-family: "IM Fell English", serif;
+    color: white;
+    font-weight: 500;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dropdown-menu li:last-child {
+    border-bottom: none;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 10px 15px;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-menu li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Show the menu on hover */
+.user-menu:hover .dropdown-menu {
+    opacity: 0.8;
+    visibility: visible;
+}
+
+body{
+    background-color: rgba(0, 0, 40, 1);
+    z-index: -1;
+}
+
+/* General styling for all content sections */
+.content-section {
+    opacity: 1;
+    padding: 60px 20px;
+    margin: 30px 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.content-section h2 {
+    font-family: "Orbitron", Arial, sans-serif;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: rgba(218, 192, 140, 0.8);
+}
+
+.content-section p {
+    font-family: "IM Fell English", serif;
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.content-section ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.content-section ul li {
+    margin: 10px;
+    padding: 10px 15px;
+    background-color: rgba(135,116,181,0.8);
+    border-radius: 5px;
+    font-size: 1.1rem;
+}
+
+.content-section ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.content-section ul li a:hover {
+    color: rgba(218, 192, 140, 0.8);
+    text-decoration: underline;
+}
+
+/* Optional: Responsive for mobile devices */
+@media (max-width: 768px) {
+    .header{
+        width:100vw;
+    }
+
+    .content-section {
+        padding: 30px 10px;
+    }
+
+    .content-section h2 {
+        font-size: 2rem;
+    }
+
+    .content-section p {
+        font-size: 1rem;
+    }
+
+    .content-section ul {
+        flex-direction: column;
+    }
+
+    .content-section ul li {
+        margin-bottom: 10px;
+    }
+}
