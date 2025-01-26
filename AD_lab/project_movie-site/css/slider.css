@@ -20,7 +20,6 @@
     width: 100%;
     height: 100%;
     opacity: 0;
-    visibility: hidden;
     transition: opacity 1s ease, visibility 1s ease;
     z-index: 0;
 }
@@ -120,10 +119,6 @@
 @media (max-width: 768px) {
 .slider-item.active{
     width:100vw;
-}
-.slider-item.active video{
-    object-fit: contain;
-    height: 30vw;
 }
 }
 

@@ -103,8 +103,54 @@ header a:hover {
 }
 
 .menu_tab li {
+    position: relative; /* Make the li a positioning context for the pseudo-element */
     opacity: 0.9;
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
+    background: transparent; /* Ensure the li itself is transparent */
+}
+
+@property --angle{
+syntax: "<angle>";
+initial-value: 0deg;
+inherits: false;
+}
+
+.menu_tab li::before{
+ animation:blur-effect 3.5s linear infinite ;
+}
+
+@keyframes blur-effect {
+    from{
+        filter:blur(20px)
+    }
+    to{
+        filter:blur(19px);
+    }
+}
+.menu_tab li::after{
+    content: ''; /* Necessary for pseudo-elements to render */
+    position: absolute; /* Position relative to the li */
+    inset: -3px;
+    padding: 2px;
+    background: conic-gradient(from var(--angle), #d11149, #e68aff, #ff4800, #11ebff, #cdff58, #d11149); /* Gradient border */
+    border-radius: 5px; /* Match the shape of the li */
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); /* Mask to show only the border */
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude; /* For modern non-Webkit browsers */
+    z-index: -1; /* Ensure it stays behind the content of the li */
+}
+
+.menu_tab li::after{
+    animation:glowing-border 3.5s linear infinite ;
+   }
+
+@keyframes glowing-border{
+    from{
+        --angle:0deg;
+    }
+    to{
+        --angle:360deg;
+    }
 }
 
 .menu_tab li:hover{
@@ -298,7 +344,21 @@ body{
     .content-section {
         padding: 30px 10px;
     }
+    .search1{
+        width:100px;
+    }
+    
+    .search1 input{
+        width:100%;
+    }
 
+    .menu_tab {
+        width:fit-content;
+        display: flex;
+        align-items: center;
+        flex-shrink: 1;
+        flex-wrap: nowrap;
+    }
     .content-section h2 {
         font-size: 2rem;
     }
