@@ -130,7 +130,7 @@ inherits: false;
 .menu_tab li::after{
     content: ''; /* Necessary for pseudo-elements to render */
     position: absolute; /* Position relative to the li */
-    inset: -3px;
+    inset: -4px;
     padding: 2px;
     background: conic-gradient(from var(--angle), #d11149, #e68aff, #ff4800, #11ebff, #cdff58, #d11149); /* Gradient border */
     border-radius: 5px; /* Match the shape of the li */
