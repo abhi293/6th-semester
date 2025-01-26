@@ -158,7 +158,7 @@ inherits: false;
 }
 
 .menu_tab li a:hover{
-    text-decoration: underline;
+    text-decoration: none;
     color:aqua;
 }
 
