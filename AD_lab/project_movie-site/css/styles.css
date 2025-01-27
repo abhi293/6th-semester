@@ -504,6 +504,7 @@ body{
 
 .slider-item.active{
     width:100%;
+    height: 100%;
 }
 .slider-content{
 top:25%;
@@ -524,6 +525,8 @@ transform: scale(0.8);
      }
     .slider-item.active{
         width:100%;
+        height: 100%;
+        
     }
     .slider-content{
         display:inline-block;
