@@ -134,7 +134,8 @@ inherits: false;
     padding: 2px;
     background: conic-gradient(from var(--angle), #d11149, #e68aff, #ff4800, #11ebff, #cdff58, #d11149); /* Gradient border */
     border-radius: 5px; /* Match the shape of the li */
-    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); /* Mask to show only the border */
+    -webkit-mask: linear-gradient(to right, #000, #000) content-box, linear-gradient(to right, #000, #000); 
+    mask: linear-gradient(to right, #000, #000) content-box, linear-gradient(to right, #000, #000);
     -webkit-mask-composite: destination-out;
     mask-composite: exclude; /* For modern non-Webkit browsers */
     z-index: -1; /* Ensure it stays behind the content of the li */
