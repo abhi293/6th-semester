@@ -356,6 +356,9 @@ body{
     height: 100%;
     overflow: hidden;
 }
+.slider-container:fullscreen {
+    overflow: visible;
+}
 
 .slider-item {
     position: absolute;
@@ -374,6 +377,12 @@ body{
     opacity: 1;
     visibility: visible;
     z-index: 1;
+}
+
+.slider-item.active:fullscreen {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
 }
 
 
