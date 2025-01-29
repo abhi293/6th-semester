@@ -385,6 +385,13 @@ body{
     height: 100vh;
 }
 
+.video-slider:fullscreen {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    align-items: unset;
+}
+
 
 .slider-content {
     position: absolute;
@@ -457,10 +464,15 @@ body{
     padding-bottom: 0%;
  }
 
- .video-slider:fullscreen {
-        height:100vh;
-        width: 100vw;
-    }
+ #player:fullscreen, .slider-container:fullscreen,.video-slider:fullscreen,.slider-item.active:fullscreen {
+    position: fixed !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    overflow: visible !important;
+    display: block !important;
+}
+
+
 .slider-item.active{
     position: relative;
     width: 100%;
