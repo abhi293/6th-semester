@@ -345,6 +345,11 @@ body{
     z-index: 0;
 }
 
+.video-slider:fullscreen{
+    height:100vh;
+    width: 100vw;
+}
+
 .slider-container {
     position: relative;
     width: 100%;
@@ -483,8 +488,9 @@ body{
  }
 
  .video-slider:fullscreen {
-    max-height: 100vh;
-}
+        height:100vh;
+        width: 100vw;
+    }
 
 .slider-item.active{
     position: relative;
