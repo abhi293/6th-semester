@@ -416,7 +416,7 @@ body{
 
 
 /* Optional: Responsive for mobile devices */
-/* @media (max-width: 768px) {
+@media (max-width: 768px) {
     .header{
         width:100vw;
     }
@@ -503,4 +503,4 @@ body{
    .search1 {
        display: none;
    }
-   } */
+   }
