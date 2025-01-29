@@ -499,7 +499,7 @@ body{
 .slider-content{
     text-align: left;
     transform: scale(0.6);
-    top:20%;
+    top:40%;
 }
 
 .menu_tab,.search1,.search1 input,.search1 img,.slider-content p{
@@ -515,6 +515,9 @@ body{
 #player:fullscreen {
     width: 100vw;
     height: 100vh;
+}
+.buttons{
+    display: flex;
 }
 }
 
