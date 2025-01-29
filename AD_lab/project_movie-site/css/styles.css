@@ -491,6 +491,10 @@ body{
     padding-bottom: 0%;
  }
 
+ .video-slider:fullscreen {
+    max-height: 100vh;
+}
+
 .slider-item.active{
     position: relative;
     width: 100%;
@@ -507,6 +511,7 @@ body{
 }
 #player {
     width: 100%;
+    min-height: 100%;
     height: auto;
 }
 .slider-content:fullscreen {
