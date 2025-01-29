@@ -468,7 +468,7 @@ body{
 }
 
 .slider-content:fullscreen {
-    display: none; /* Hide text when in fullscreen */
+    display: none; 
 }
 
 .buttons{
