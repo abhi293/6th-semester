@@ -62,4 +62,25 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+const videos = ["media/doomsday.mp4", "/media/video1.mp4", "video3.mp4"]; // Add more as needed
+let currentIndex = 0;
 
+const videoPlayer = document.querySelector(".video-player");
+const prevBtn = document.getElementById("prev-slide");
+const nextBtn = document.getElementById("next-slide");
+
+function changeVideo(index) {
+    if (index >= 0 && index < videos.length) {
+        currentIndex = index;
+        videoPlayer.src = videos[currentIndex];
+        videoPlayer.play();
+    }
+}
+
+prevBtn.addEventListener("click", () => {
+    changeVideo(currentIndex - 1);
+});
+
+nextBtn.addEventListener("click", () => {
+    changeVideo(currentIndex + 1);
+});
