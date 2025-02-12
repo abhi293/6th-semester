@@ -1,13 +1,18 @@
-function runTask() {
-    let start = performance.now(); // Start time
-
-    // Simulate some work (e.g., a loop)
-    for (let i = 0; i < 1e6; i++) {
-        Math.sqrt(i); // Some computation
+const logger = require('./logger.js');
+const ITERATIONS_MAX = 5;
+let iteration = 0;
+logger.info('START', 'MAINLINE');
+const timeout = setInterval(() => {
+    logger.info('START: setInterval', 'TIMERS PHASE');
+    if (iteration < ITERATIONS_MAX) {
+        setTimeout(() => {
+            logger.info('setInterval.setTimeout', 'TIMERS PHASE');
+        });
+    } else {
+        logger.info('Max interval count exceeded. Goodbye.', 'TIMERS PHASE');
+        clearInterval(timeout);
     }
-
-    let end = performance.now(); // End time
-    console.log(`Execution Time: ${(end - start).toFixed(2)} ms`);
-}
-
-runTask();
+    iteration++;
+    logger.info('END: setInterval', 'TIMERS PHASE');
+}, 0);
+logger.info('MAINLINE: END');
