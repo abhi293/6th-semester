@@ -1,0 +1,8 @@
+{
+    "_comments":"//json objects are written in key/value pairs.emplyees is an array of objects with 3 values",
+    "employees":[
+        {"firstName":"John","lastName":"Doe","age":30},
+        {"firstName":"Anna","lastName":"Smith","age":32},
+        {"firstName":"Peter","lastName":"Jones","age":45}
+        ]
+    }
