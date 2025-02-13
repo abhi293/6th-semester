@@ -24,7 +24,7 @@ int main() {
     //iterator for vector of pairs
     vector<pair<int, int>> vp = {{1, 2}, {3, 4}, {5, 6}};
     vector<pair<int, int>>::iterator it1 ;
-    cout << "Printing vector of pairs" << endl;
+    cout << "\nPrinting vector of pairs" << endl;
     for(it1 = vp.begin(); it1 != vp.end(); it1++) {
         cout << it1->first << " " << it1->second << endl; //or, (*it1).first << " " << (*it1).second << endl;  same thing
     }
