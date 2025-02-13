@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Website | Login Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: url(lonin_background.jpeg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100vh;
+
+        }
+
+
+        .login-container {
+            height: 500px;
+            width: 500px;
+            background-color: #ffffff91;
+            padding: 20px 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+
+        }
+
+        .login-container h2 {
+            font-size: 40px;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        form {
+            margin-top: 50px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+
+            display: block;
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #ff09fb;
+        }
+
+        .show-password {
+            margin-bottom: 50px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .form-group {
+            width: auto;
+            margin-right: 5px;
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 15px 30px;
+            background-color: #f27bf9;
+            border: none;
+            text-decoration: none;
+            color: #fff;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-align: center;
+        }
+
+        .button-out {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .login-btn:hover {
+            background-color: #750879;
+        }
+
+        .login-footer {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+        .login-footer a {
+            color: #0088a9;
+            text-decoration: none;
+        }
+
+        .login-footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 480px) {
+            .login-container {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="section1"></div>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter password" required>
+            </div>
+            <div class="show-password">
+                <label for="show-password">Show Password </label>
+                <input type="checkbox" id="show-password">
+
+            </div>
+            <div class="button-out">
+                <a href="index.html" type="submit" class="login-btn">Sign In</a>
+            </div>
+
+        </form>
+        <div class="login-footer">
+            <p><a href="#">Forgot Username / Password?</a></p>
+            <p>Don't have an account? <a href="#">Sign up</a></p>
+        </div>
+    </div>
+
+    <div class="section2"></div>
+</body>
+
+</html>

@@ -1,0 +1,571 @@
+.orbitron-heading {
+    font-family: "Orbitron", Arial, sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700; /* Replace with desired weight: 400, 500, etc. */
+    font-style: normal;
+  }
+
+  .orbitron-subheading {
+    font-family: "Orbitron", Arial, sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  .im-fell-english-regular {
+    font-family: "IM Fell English", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .im-fell-english-regular-italic {
+    font-family: "IM Fell English", serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+html{
+    width: 100%;
+    font-family: "Orbitron", Arial, sans-serif;
+    font-style:normal;
+    font-weight: 700;
+    font-size: 10px;
+    scroll-behavior:smooth;
+}
+
+header{
+    width:100%;
+    position: sticky;
+    top: 30px;
+    height: 0;
+    background-color: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+/* header img{
+    border-radius: 50%;
+    object-fit: fill;
+    height: 45px;
+    margin-left: 3vw;
+    backdrop-filter: blur(5px);
+    box-shadow:0 0 10px 5px rgba(52, 41, 77, 0.8);
+    transition: transform 0.3s ease;
+} */
+
+header h1{
+    font-family: "Orbitron", Arial, sans-serif;
+    border: 1px;
+    margin-left: 2.5vw;
+    text-shadow: 2px 2px rgba(7, 7, 21, 0.8);
+    color:white;
+    font-weight: 400;
+    font-style:normal;
+    font-size: 25px;
+}
+
+header text{
+    mix-blend-mode: color-burn;
+}
+
+header a {
+    text-shadow: 2px 2px rgba(7, 7, 21, 0.8);
+    font-size: 20px;
+    text-decoration: none; /* Removes underline */
+    color: inherit; /* Ensures the link text matches the surrounding text color */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.menu_tab{
+    text-align: center;
+    color:white;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap:2vw;
+    padding-right: 2rem;
+}
+
+header a:hover {
+    transform: scale(1.1);
+    color: rgba(218, 192, 140, 0.8);
+    text-decoration: none;
+}
+
+.menu_tab li {
+    position: relative; /* Make the li a positioning context for the pseudo-element */
+    opacity: 0.9;
+    transition: all 0.3s ease;
+    background: transparent; /* Ensure the li itself is transparent */
+}
+
+@property --angle{
+syntax: "<angle>";
+initial-value: 0deg;
+inherits: false;
+}
+
+.menu_tab li::before{
+ animation:blur-effect 3.5s linear infinite ;
+}
+
+@keyframes blur-effect {
+    from{
+        filter:blur(20px)
+    }
+    to{
+        filter:blur(19px);
+    }
+}
+.menu_tab li::after{
+    content: ''; /* Necessary for pseudo-elements to render */
+    position: absolute; /* Position relative to the li */
+    inset: -4px;
+    padding: 2px;
+    background: conic-gradient(from var(--angle), #d11149, #e68aff, #ff4800, #11ebff, #cdff58, #d11149); /* Gradient border */
+    border-radius: 5px; /* Match the shape of the li */
+    -webkit-mask: linear-gradient(to right, #000, #000) content-box, linear-gradient(to right, #000, #000); 
+    mask: linear-gradient(to right, #000, #000) content-box, linear-gradient(to right, #000, #000);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude; /* For modern non-Webkit browsers */
+    z-index: -1; /* Ensure it stays behind the content of the li */
+}
+
+.menu_tab li::after{
+    animation:glowing-border 3.5s linear infinite ;
+   }
+
+@keyframes glowing-border{
+    from{
+        --angle:0deg;
+    }
+    to{
+        --angle:360deg;
+    }
+}
+
+.menu_tab li:hover{
+    transform: scale(1.2);
+}
+
+.menu_tab li a:hover{
+    text-decoration: none;
+color:white;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.search1 {
+    position: relative;
+    border: none; /* Added border color */
+    border-radius: 5px;
+    backdrop-filter: blur(5px);
+    box-shadow:0 0 17px 5px rgba(52, 41, 77, 0.8);
+    width:12vw; /* Adjust horizontal size */
+    height: 36px; /* Adjust vertical size */
+}
+
+
+.search1 input {
+    border: none;
+    padding-left: 4px;
+    width: 100%; /* Make the input fill the width of the container */
+    height: 36px; /* Adjust the vertical size of the input */
+    outline: none; /* Optional: Remove the outline when the input is focused */
+    font-size: 16px; /* Optional: Increase font size for better readability */
+    border-radius: 3px; /* Optional: Match the rounded corners of the outer container */
+}
+
+.search1 img{
+    position:absolute;
+    border-radius:50% ;
+    margin: auto;
+    right:0px;
+    height:36px;
+    box-shadow: none;
+    border-radius: 0%;
+}
+
+
+/* Styling for the user1 logo */
+.user1 {
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: white;
+    margin:0 1rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.user1:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Container for the dropdown menu */
+.user-menu {
+    position: relative;
+    display: flex;
+    margin-right: 20px;
+    height: 15px;
+    align-items: center;
+}
+
+/* Dropdown menu styling */
+.dropdown-menu {
+    position: absolute;
+    top: 100%; /* Align directly below the user image */
+    right: 0; /* Align to the right edge */
+    background-color: rgba(52, 41, 77, 0.95);
+    color: white;
+    list-style:none;
+    padding: 0;
+    margin: 5px 0 0; /* Small gap below the image */
+    width: 200px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    visibility: hidden;
+    opacity:1;
+    transition: all 0.3s ease; /* Smooth dropdown */
+    z-index:999;
+    overflow: hidden;
+}
+
+/* Menu items */
+.dropdown-menu li {
+    font-family: "IM Fell English", serif;
+    color: white;
+    font-weight: 500;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dropdown-menu li:last-child {
+    border-bottom: none;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 10px 15px;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-menu li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Show the menu on hover */
+.user-menu:hover .dropdown-menu {
+    opacity: 0.8;
+    visibility: visible;
+}
+
+body{
+    background-color: rgba(0, 0, 40, 1);
+    z-index: -1;
+    -webkit-text-size-adjust: 100%;
+}
+
+/* General styling for all content sections */
+.content-section {
+    opacity: 1;
+    padding: 60px 20px;
+    margin: 30px 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.content-section h2 {
+    font-family: "Orbitron", Arial, sans-serif;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: rgba(218, 192, 140, 0.8);
+}
+
+.content-section p {
+    font-family: "IM Fell English", serif;
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.content-section ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.content-section ul li {
+    margin: 10px;
+    padding: 10px 15px;
+    background-color: rgba(135,116,181,0.8);
+    border-radius: 5px;
+    font-size: 1.1rem;
+}
+
+.content-section ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.content-section ul li a:hover {
+    color: rgba(218, 192, 140, 0.8);
+    text-decoration: underline;
+}
+
+.video-slider {
+    position: relative;
+    min-height: auto;
+    height: auto; /* Adjusts based on content */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Ensures proper alignment */
+}
+
+.video-slider:fullscreen{
+    height:100vh;
+    width: 100vw;
+}
+
+.slider-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit:fill;
+    overflow: hidden;
+}
+.slider-container:fullscreen {
+    overflow: visible;
+}
+
+
+/* .slider-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit:fill;
+    opacity: 0;
+    transition: opacity 1s ease, visibility 1s ease;
+    z-index: 0;
+} */
+
+.slider-item.active {
+    width: 100%;
+    height: 100%;
+    object-fit:fill;
+    opacity: 1;
+    visibility: visible;
+    z-index: 1;
+}
+
+.slider-item.active:fullscreen {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+}
+
+.video-slider:fullscreen {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    align-items:unset;
+}
+
+
+.slider-content {
+    position: absolute;
+    top:50%;
+    left: 2.5vw;;
+    transform: translateY(-50%);
+    color: white;
+    z-index: 2;
+    max-width: 40%;
+}
+
+.slider-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color:#ff0000ff;
+}
+
+.slider-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.slide-controls {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.slide-controls button {
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.slider-container:hover .slide-controls {
+    opacity: 1;
+}
+
+.slide-controls button:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+
+.buttons a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background-color: rgba(255, 0, 0, 0.8); /* Red Netflix-style button */
+    padding: 10px 20px;
+    margin-right: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    gap:4px;
+}
+
+.buttons a:hover {
+    background-color: rgba(255, 0, 0, 1);
+}
+
+
+/* Optional: Responsive for mobile devices */
+@media (max-width: 768px) {
+    /* .header{
+        width:100vw;
+    }
+
+    .content-section {
+        padding: 30px 10px;
+    }
+
+    .content-section h2 {
+        font-size: 2rem;
+    }
+
+    .content-section p {
+        font-size: 1rem;
+    }
+
+    .content-section ul {
+        flex-direction: column;
+    }
+
+    .content-section ul li {
+        margin-bottom: 10px;
+    } */
+    .video-slider{
+        min-height: auto;
+        height: auto; /* Adjusts based on content */
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Ensures proper alignment */
+     }
+
+ #player:fullscreen, .slider-container:fullscreen,.video-slider:fullscreen,.slider-item.active:fullscreen {
+    position: fixed !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    overflow: visible !important;
+    display: block !important;
+}
+
+
+.slider-item.active{
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+.slider-content{
+    text-align: left;
+    transform: scale(0.6);
+    top:40%;
+}
+
+.menu_tab,.search1,.search1 input,.search1 img,.slider-content p{
+    display: none;
+}
+
+.slider-content:fullscreen {
+    display: none; 
+}
+
+.buttons{
+    display: flex;
+}
+}
+
+@media (max-width: 480px) {
+    .video-slider{
+        min-height: auto;
+        height: auto; /* Adjusts based on content */
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Ensures proper alignment */
+    }
+    #player:fullscreen, .slider-container:fullscreen,.video-slider:fullscreen,.slider-item.active:fullscreen {
+        position: fixed !important;
+        width: 100vw !important;
+        height: 100vh !important;
+        overflow: visible !important;
+        display: block !important;
+    }
+    .slider-item.active{
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+    .slider-content{
+        text-align: left;
+        transform: scale(0.6);
+        top:40%;
+    }
+    .menu_tab,.search1,.search1 input,.search1 img,.slider-content p{
+        display: none;
+    }
+    .slider-content:fullscreen {
+        display: none; 
+    }
+
+    .buttons{
+        display: flex;
+    }
+   }
