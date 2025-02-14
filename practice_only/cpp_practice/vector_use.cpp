@@ -20,7 +20,7 @@ void printVecStr(vector<string> &vs) {
 
 int main(){
     vector<int>v;  //vector is a dynamic array from Standard Template Library
-    //vector<int>v(5); //it will create a vector of size 5, each initialised 
+    //vector<int>v(5); //it will create a vector of size 5, each initialised
     //with value 0, size can still be increased using push_back
     //vector<int>v(5,3); //it will create a vector of size 5 and all elements will be 3
 
